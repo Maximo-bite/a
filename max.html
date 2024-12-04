@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<title>TFN - Tehnička Fight Night</title>
+<style>
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  width: 144px;
+  height: 64px;
+  margin-left: 20px;
+}
+
+header nav {
+  margin-right: 20px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin: 0 10px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.fighter-info {
+  display: flex;
+  align-items: center;
+}
+
+.fighter-image {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.stats {
+  text-align: left;
+}
+
+.stats table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stats td, .stats th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.fight-history {
+  margin-top: 30px;
+}
+
+.fight-history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fight-history th, .fight-history td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.fight-history td:first-child {
+  text-align: center;
+}
+
+
+.fight-history tr {
+  background-color: transparent; /*Ensure rows are transparent*/
+}
+
+.fight-history td:first-child.win {
+  background-color: #0f0;
+  color: white;
+}
+
+.fight-history td:first-child.loss {
+  background-color: #f00;
+  color: white;
+}
+
+/* Responsive design (adjust as needed) */
+@media (max-width: 768px) {
+  .fighter-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .fighter-image {
+    margin-bottom: 20px;
+  }
+}
+
+.red-bg { background-color: #0f0; color: white; }
+.green-bg { background-color: red; color: white }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="image (2).png" alt="TFN Logo">
+  <nav>
+  
+    <a href="vesti.html">Vesti</a>
+    <a href="TFN - Borci.html">Borci</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="fighter-info">
+    <img src="max.jpg" alt="Đorđe Radovanović" class="fighter-image">
+    <div>
+      <h2>Maksim Mitrović</h2>
+      <div class="stats">
+        <table>
+          <tr><th>Godine</th><td>15</td></tr>
+          <tr><th>Visina</th><td>178cm</td></tr>
+          <tr><th>Kilaža</th><td>75Kg</td></tr>
+          <tr><th>Pobjede</th><td class="red-bg">5</td></tr>
+          <tr><th>Porazi</th><td class="green-bg">0</td></tr>
+          <tr><th>Nerješene</th><td>0</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="fight-history">
+    <h3>Istorija Borbi - Profesionalnih</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Rezultat</th>
+          <th>Borac</th>
+          <th>Event</th>
+          <th>Metod</th>
+          <th>Sudija</th>
+          <th>R</th>
+          <th>Vrijeme</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tr>
+      <tr class="win">
+        <td class="win">Pobjeda</td>
+        <td>Ognjen Trubarac Bilić</td>
+        <td>TFN 6 - Arena 2</td>
+        <td>TKO (Punches to the body)</td>
+        <td>Đorđe Radovanović</td>
+        <td>2</td>
+        <td>0:34</td>
+      </tr>
+      <tr class="win">
+        <td class="win">Pobjeda</td>
+        <td>Vukašin Ivanović</td>
+        <td>TFN 5 - Arena 2</td>
+        <td>TKO (Punches)</td>
+        <td>Andrej Marijanović</td>
+        <td>1</td>
+        <td>0:18</td>
+      </tr>
+      <tr class="win">
+        <td class="win">Pobjeda</td>
+        <td>Luka Budiša</td>
+        <td>TFN 4 - Arena 2</td>
+        <td>TKO (Retirement)</td>
+        <td>Đorđe Radovanović</td>
+        <td>2</td>
+        <td>1:13</td>
+      </tr>
+        <tr class="win">
+          <td class="win">Pobjeda</td>
+          <td>Đorđe Radovanović</td>
+          <td>TFN 3 - "Osveta"</td>
+          <td>TKO (Leg kick)</td>
+          <td>Andrej Marijanović</td>
+          <td>2</td>
+          <td>0:16</td>
+        </tr>
+        <tr class="win">
+          <td class="win">Pobjeda</td>
+          <td>Đorđe Radovanović</td>
+          <td>TFN 2 - Arena 2</td>
+          <td>Decision (Unanimous)</td>
+          <td>Luka Budiša</td>
+          <td>3</td>
+          <td>2:00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>
+

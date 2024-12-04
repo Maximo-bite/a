@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<title>TFN - Vesti</title>
+<style>
+body { font-family: sans-serif; margin: 0; }
+header { background-color: black; color: white; padding: 10px 0; text-align: center; }
+header img { width: 144px; height: 64px; }
+nav a { color: white; text-decoration: none; margin: 0 10px; }
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.news-item {
+  width: 48%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-decoration: none; /*remove default link underline*/
+}
+.news-item a {
+    text-decoration: none; /* Remove default underline from links */
+    color: inherit; /* Inherit text color from parent */
+    display: block; /* Makes the link take up the entire news item */
+}
+
+.news-item img { max-width: 100%; height: auto; margin-bottom: 5px; }
+</style>
+</head>
+<body>
+<header>
+  <img src="image (2).png" alt="TFN Logo">
+  <nav>
+    
+    <a href="TFN - Borci.html">Borci</a>
+  </nav>
+</header>
+<div class="news-container">
+  <div class="news-item">
+    <a href="https://www.example.com/news1" target="_blank">  <!-- Link to News 1 -->
+      <img src="1.jpg" alt="Vesti 1">
+      <h3>NOVA DUBINA U TFN? DOLAZAK DRUGIH ODJELJENJA</h3>
+      <p>Nezvanično se navodi potencijalni dvoboj između Borisa i Maksima</p>
+    </a>
+  </div>
+  <div class="news-item">
+    <a href="https://www.example.com/news2" target="_blank">  <!-- Link to News 2 -->
+      <img src="2.jpg" alt="Vesti 2">
+      <h3>OGNJEN PORAŽEN U SVOM DEBITANTNOM MEČU OD STRANE MAKSIMA!</h3>
+      <p>Koliko god da je bio odlučan da sruši šampiona, udarac u jetru je presudio.</p>
+    </a>
+  </div>
+</div>
+</body>
+</html>
+

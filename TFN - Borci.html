@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<title>TFN - Borci</title>
+<style>
+body { font-family: sans-serif; margin: 0; background-color: #222; color: white; }
+header { background-color: black; color: white; padding: 10px 0; }
+header img { width: 144px; height: 64px; margin-left: 20px; }
+nav { margin-right: 20px; }
+nav a { color: white; text-decoration: none; margin: 0 10px; }
+.fighter-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to multiple rows */
+  justify-content: space-around; /* Distribute space between items */
+  max-width: 80%; /* For responsiveness */
+  margin: 20px auto;
+}
+.fighter-item {
+  width: 45%; /* Adjust width as needed for two per row */
+  margin-bottom: 10px;
+  background-color: #333;
+  padding: 5px;
+  text-align: center; /* Center text */
+  cursor: pointer;
+}
+.fighter-item img {
+  width: 100%;
+  height: auto;
+  max-height: 75px;
+  margin-bottom: 5px;
+}
+.fighter-item h3 {
+  margin: 0; /* Remove default margin */
+  font-size: 1em;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .fighter-container {
+    max-width: 95%;
+  }
+  .fighter-item {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <img src="image (2).png" alt="TFN Logo">
+  <nav>
+    <a href="vesti.html">Vesti</a>
+    <a href="borci.html">Borci</a> </nav>
+</header>
+
+<div class="fighter-container" id="fighter-grid">
+  </div>
+
+<script>
+const fighters = [
+  { name: "Maksim Mitrović", img: "maksim1.jpg", bioUrl: "max.html" },
+  { name: "Vukašin Ivanović", img: "v.jpg", bioUrl: "vukas-ivanovic.html" },
+  { name: "Neven Stanojević", img: "N.jpg", bioUrl: "neven-stanojevic.html" },
+  { name: "Đorđe Radovanović", img: "D.jpg", bioUrl: "index.html" },
+  { name: "Luka Budiša", img: "L.jpg", bioUrl: "luka-budisa.html" },
+  { name: "Ognjen Trubarac Bilić", img: "O.jpg", bioUrl: "ognjen-trubara-bilic.html" }
+];
+
+const fighterGrid = document.getElementById('fighter-grid');
+
+fighters.forEach(fighter => {
+  const fighterItem = document.createElement('div');
+  fighterItem.classList.add('fighter-item');
+  fighterItem.innerHTML = `
+    <img src="${fighter.img}" alt="${fighter.name}">
+    <h3>${fighter.name}</h3>
+  `;
+  fighterItem.addEventListener('click', () => {
+    window.location.href = fighter.bioUrl;
+  });
+  fighterGrid.appendChild(fighterItem);
+});
+</script>
+</body>
+</html>
